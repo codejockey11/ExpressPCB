@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<HTML>
+  <HEAD>
+    <meta HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=utf-8"/>
+<script>
+function resistor_calculate()
+{
+	var first_digit_js = document.getElementsByName("first_digit")[0].value;
+	var second_digit_js = document.getElementsByName("second_digit")[0].value;
+	var multiplier_js = document.getElementsByName("multiplier")[0].value;
+	var tolerance_js = document.getElementsByName("tolerance")[0].value;
+	//alert(first_digit_js+' '+second_digit_js+' '+multiplier_js);
+
+	var f = document.getElementById("one");
+	document.getElementById("first_div").style.backgroundColor = f.options[f.selectedIndex].style.backgroundColor;
+
+	var g = document.getElementById("two");
+	document.getElementById("second_div").style.backgroundColor = g.options[g.selectedIndex].style.backgroundColor;
+
+	var h = document.getElementById("three");
+	document.getElementById("third_div").style.backgroundColor = h.options[h.selectedIndex].style.backgroundColor;
+
+	var i = document.getElementById("four");
+	document.getElementById("fourth_div").style.backgroundColor = i.options[i.selectedIndex].style.backgroundColor;
+
+	var first_two_digit = first_digit_js+second_digit_js;
+	var total_res = (first_two_digit*multiplier_js);
+
+	if(total_res > 1000 && total_res < 1000000)
+	{
+		total_res = (total_res/1000)+'K';
+	}
+	else if(total_res > 1000000)
+	{
+		total_res = (total_res/1000000)+'M';
+	}
+
+	document.getElementsByName('resistance')[0].value = total_res+' Ohms';
+	document.getElementsByName('tolerance_html')[0].value = tolerance_js;
+}
+
+function resistor_calculate_5()
+{
+	var first_digit_js = document.getElementsByName("first_digit5")[0].value;
+	var second_digit_js = document.getElementsByName("second_digit5")[0].value;
+	var third_digit_js = document.getElementsByName("third_digit5")[0].value;
+	var multiplier_js = document.getElementsByName("multiplier5")[0].value;
+	var tolerance_js = document.getElementsByName("tolerance5")[0].value;
+	//alert(first_digit_js+' '+second_digit_js+' '+multiplier_js);
+
+	var f = document.getElementById("one5");
+	document.getElementById("first_div5").style.backgroundColor = f.options[f.selectedIndex].style.backgroundColor;
+
+	var g = document.getElementById("two5");
+	document.getElementById("second_div5").style.backgroundColor = g.options[g.selectedIndex].style.backgroundColor;
+
+	var h = document.getElementById("three5");
+	document.getElementById("third_div5").style.backgroundColor = h.options[h.selectedIndex].style.backgroundColor;
+
+	var i = document.getElementById("four5");
+	document.getElementById("fourth_div5").style.backgroundColor = i.options[i.selectedIndex].style.backgroundColor;
+
+	var j = document.getElementById("five5");
+	document.getElementById("fifth_div5").style.backgroundColor = j.options[j.selectedIndex].style.backgroundColor;
+
+	var first_three_digit = first_digit_js+second_digit_js+third_digit_js;
+	var total_res = (first_three_digit*multiplier_js);
+
+	if(total_res > 1000 && total_res < 1000000)
+	{
+		total_res = (total_res/1000)+'K';
+	}
+	else if(total_res > 1000000)
+	{
+		total_res = (total_res/1000000)+'M';
+	}
+
+	document.getElementsByName('resistance5')[0].value = total_res+' Ohms';
+	document.getElementsByName('tolerance_html5')[0].value = tolerance_js;
+
+}
+
+function resistor_calculate_6()
+{
+	var first_digit_js = document.getElementsByName("first_digit6")[0].value;
+	var second_digit_js = document.getElementsByName("second_digit6")[0].value;
+	var third_digit_js = document.getElementsByName("third_digit6")[0].value;
+	var multiplier_js = document.getElementsByName("multiplier6")[0].value;
+	var tolerance_js = document.getElementsByName("tolerance6")[0].value;
+	var temp_js = document.getElementsByName("tempco6")[0].value;
+	//alert(first_digit_js+' '+second_digit_js+' '+multiplier_js);
+
+	var f = document.getElementById("one6");
+	document.getElementById("first_div6").style.backgroundColor = f.options[f.selectedIndex].style.backgroundColor;
+
+	var g = document.getElementById("two6");
+	document.getElementById("second_div6").style.backgroundColor = g.options[g.selectedIndex].style.backgroundColor;
+
+	var h = document.getElementById("three6");
+	document.getElementById("third_div6").style.backgroundColor = h.options[h.selectedIndex].style.backgroundColor;
+
+	var i = document.getElementById("four6");
+	document.getElementById("fourth_div6").style.backgroundColor = i.options[i.selectedIndex].style.backgroundColor;
+
+	var j = document.getElementById("five6");
+	document.getElementById("fifth_div6").style.backgroundColor = j.options[j.selectedIndex].style.backgroundColor;
+
+	var k = document.getElementById("six6");
+	document.getElementById("sixth_div6").style.backgroundColor = k.options[k.selectedIndex].style.backgroundColor;
+
+	var first_three_digit = first_digit_js+second_digit_js+third_digit_js;
+	var total_res = (first_three_digit*multiplier_js);
+
+	if(total_res > 1000 && total_res < 1000000)
+	{
+		total_res = (total_res/1000)+'K';
+	}
+	else if(total_res > 1000000)
+	{
+		total_res = (total_res/1000000)+'M';
+	}
+
+	document.getElementsByName('resistance6')[0].value = total_res+' Ohms';
+	document.getElementsByName('tolerance_html6')[0].value = tolerance_js;
+	document.getElementsByName('temp_html6')[0].value = temp_js+' ppm/K';
+}
+</script>
+
+<style>
+button
+{
+	font-family:Verdana;
+	font-size:12px;
+	text-align:center;
+	min-width:60px;
+	border-radius:3px;
+	border:1px solid rgb(211, 211, 211);
+}
+button:hover
+{
+	color:rgb(11, 83, 148);
+	border-radius:3px;
+	box-shadow:0px 0px 3px rgb(11, 83, 148);
+	border:1px solid rgb(11, 83, 148);
+}
+body
+{
+	font-family:Verdana;
+	font-size:12px;
+	font-weight:normal;
+}
+</style>
+
+
+  </HEAD>
+  <BODY>
+    <TITLE>Resistor Code Calculator</TITLE>
+
+<a href="voltageDivider.html">Voltage Divider</a><br/>
+
+
+<div style=" background-image:url(resistor-symbol.png); background-repeat:no-repeat;display:inline-block; width:650px; margin-bottom: 30px;">
+<div id="first_div" style="background-color: green; width: 20px; height: 108px; margin-left: 230px; display: inherit; margin-bottom: 4px;"></div>
+<div id="second_div" style="background-color:black; width:20px;height: 108px; margin-left: 35px; display:inherit;margin-bottom:4px;"></div>
+<div id="third_div" style="background-color: rgb(165, 42, 42); width: 20px; height: 108px; margin-left: 35px; display: inherit; margin-bottom: 4px;"></div>
+<div id="fourth_div" style="background-color: orange; width: 20px; height: 117px; margin-left: 70px; display: inherit;"></div>
+</div>
+
+<form name="resistor_color_code">
+<table>
+
+<tbody><tr>
+<td><b>First Digit</b></td><td><b>Second Digit</b></td><td><b>Multiplier</b></td><td><b>Tolerance</b></td>
+</tr>
+
+<tr>
+<td>
+<select style="color: rgb(255, 255, 255); background-color: green;" name="first_digit" id="one" onchange="resistor_calculate()">
+		<option value="1" selected="selected" style="color: #ffffff; background-color: #a52a2a;">1 Brown
+            </option><option value="2" style="color: #ffffff; background-color: red;">2 Red
+            </option><option value="3" style="color: #000000; background-color: orange;">3 Orange
+            </option><option value="4" style="color: #000000; background-color: yellow;">4 Yellow
+            </option><option value="5" style="color: #ffffff; background-color: green;">5 Green
+            </option><option value="6" style="color: #ffffff; background-color: blue;">6 Blue
+            </option><option value="7" style="color: #ffffff; background-color: #ee82ee;">7 Violet
+            </option><option value="8" style="color: #ffffff; background-color: gray;">8 Gray
+            </option><option value="9" style="color: #000000; background-color: #ffffff;">9 White
+            </option></select>
+</td>
+<td>
+<select style="color: #ffffff; background-color: Black;" name="second_digit" onchange="resistor_calculate()" id="two">
+			<option value="0" selected="selected" style="color: #ffffff; background-color: black;">0 Black
+            </option><option value="1" style="color: #ffffff; background-color: #a52a2a;">1 Brown
+            </option><option value="2" style="color: #ffffff; background-color: red;">2 Red
+            </option><option value="3" style="color: #000000; background-color: orange;">3 Orange
+            </option><option value="4" style="color: #000000; background-color: yellow;">4 Yellow
+            </option><option value="5" style="color: #ffffff; background-color: green;">5 Green
+            </option><option value="6" style="color: #ffffff; background-color: blue;">6 Blue
+            </option><option value="7" style="color: #ffffff; background-color: #ee82ee;">7 Violet
+            </option><option value="8" style="color: #ffffff; background-color: gray;">8 Gray
+            </option><option value="9" style="color: #000000; background-color: #ffffff;">9 White
+            </option></select>
+</td>
+<td>
+<select style="color: rgb(255, 255, 255); background-color: rgb(165, 42, 42);" name="multiplier" onchange="resistor_calculate()" id="three">
+		<option value="1" style="color: #ffffff; background-color: black;">x1 Black
+            </option><option value="10" style="color: #ffffff; background-color: #a52a2a;">x10 Brown
+            </option><option value="100" selected="selected" style="color: #ffffff; background-color: red;">x100 Red
+            </option><option value="1000" style="color: #000000; background-color: orange;">x1000 Orange
+            </option><option value="10000" style="color: #000000; background-color: yellow;">x10000 Yellow
+            </option><option value="100000" style="color: #ffffff; background-color: green;">x100000 Green
+            </option><option value="1000000" style="color: #ffffff; background-color: blue;">x1000000 Blue
+            </option>
+            <option value="10000000" style="color: #ffffff; background-color: #ee82ee;">x10M Violet
+            </option>
+            <option value="100000000" style="color: #ffffff; background-color: gray;">x100M Gray
+            </option>
+            <option value="1000000000" style="color: #000000; background-color: white;">x1G White
+            </option>
+            <option value="0.1" style="color: #000000; background-color: #ffd700;">x0.1 Gold
+            </option><option value="0.01" style="color: #000000; background-color: silver;">x0.01 Silver
+            </option></select>
+</td>
+
+<td>
+<select style="color: rgb(0, 0, 0); background-color: orange;" name="tolerance" onchange="resistor_calculate()" id="four">
+
+<option value="± 1%" style="color: #ffffff; background-color: #a52a2a;">± 1% Brown</option>
+<option value="± 2%" style="color: #ffffff; background-color: red;">± 2% Red</option>
+<option value="± 3%" style="color: #000000; background-color: orange;">± 3% Orange</option>
+<option value="± 4%" style="color: #000000; background-color: yellow;">± 4% Yellow</option>
+<option value="± 0.5%" style="color: #ffffff; background-color: green;">± 0.5% Green</option>
+<option value="± 0.25%" style="color: #ffffff; background-color: blue;">± 0.25% Blue</option>
+<option value="± 0.10%" style="color: #ffffff; background-color: #ee82ee;">± 0.10% Violet</option>
+<option value="± 0.05%" style="color: #ffffff; background-color: gray;">± 0.05% Gray</option>
+<option value="± 5%" selected="selected" style="color: #000000; background-color: #ffd700;">± 5% Gold</option>
+<option value="± 10%" style="color: #000000; background-color: silver;">± 10% Silver</option>
+
+</select>
+</td>
+</tr>
+
+<tr style="height:20px;"></tr>
+
+<tr>
+<td>
+<label><b>Resistance </b>:</label>
+</td>
+<td colspan="3">
+<input type="text" name="resistance" value="1000 Ohms">
+</td>
+
+</tr>
+
+<tr>
+<td>
+<label><b>Tolerance </b>:</label>
+</td>
+<td colspan="3">
+<input type="text" name="tolerance_html" value="± 5%">
+</td>
+</tr>
+
+</tbody></table>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style=" background-image:url(resistor-symbol.png); background-repeat:no-repeat;display:inline-block; width:650px; margin-bottom: 30px;">
+
+<div id="first_div5" style="background-color: green; width: 20px; height: 117px; margin-left: 185px; display: inherit; margin-bottom: 4px;"></div>
+<div id="second_div5" style="background-color:black; width:20px;height: 108px; margin-left: 35px; display:inherit;margin-bottom:9px;"></div>
+<div id="third_div5" style="background-color: black; width: 20px; height: 108px; margin-left: 35px; display: inherit; margin-bottom: 9px;"></div>
+<div id="fourth_div5" style="background-color: rgb(165, 42, 42); width: 20px; height: 108px; margin-left: 35px; display: inherit; margin-bottom: 9px;"></div>
+<div id="fifth_div5" style="background-color:#ffd700; width:20px;height: 118px; margin-left: 62px;display:inherit;margin-bottom:4px;"></div>
+
+</div>
+
+
+
+<form name="resistor_color_code_5">
+<table>
+
+<tbody><tr>
+<td><b>First Digit</b></td><td><b>Second Digit</b></td><td><b>Third Digit</b></td><td><b>Multiplier</b></td><td><b>Tolerance</b></td>
+</tr>
+
+<tr>
+<td>
+<select style="color: rgb(255, 255, 255); background-color: green;" name="first_digit5" id="one5" onchange="resistor_calculate_5()">
+		<option value="1" selected="selected" style="color: #ffffff; background-color: #a52a2a;">1 Brown
+            </option><option value="2" style="color: #ffffff; background-color: red;">2 Red
+            </option><option value="3" style="color: #000000; background-color: orange;">3 Orange
+            </option><option value="4" style="color: #000000; background-color: yellow;">4 Yellow
+            </option><option value="5" style="color: #ffffff; background-color: green;">5 Green
+            </option><option value="6" style="color: #ffffff; background-color: blue;">6 Blue
+            </option><option value="7" style="color: #ffffff; background-color: #ee82ee;">7 Violet
+            </option><option value="8" style="color: #ffffff; background-color: gray;">8 Gray
+            </option><option value="9" style="color: #000000; background-color: #ffffff;">9 White
+            </option></select>
+</td>
+<td>
+<select style="color: #ffffff; background-color: Black;" name="second_digit5" onchange="resistor_calculate_5()" id="two5">
+			<option value="0" selected="selected" style="color: #ffffff; background-color: black;">0 Black
+            </option><option value="1" style="color: #ffffff; background-color: #a52a2a;">1 Brown
+            </option><option value="2" style="color: #ffffff; background-color: red;">2 Red
+            </option><option value="3" style="color: #000000; background-color: orange;">3 Orange
+            </option><option value="4" style="color: #000000; background-color: yellow;">4 Yellow
+            </option><option value="5" style="color: #ffffff; background-color: green;">5 Green
+            </option><option value="6" style="color: #ffffff; background-color: blue;">6 Blue
+            </option><option value="7" style="color: #ffffff; background-color: #ee82ee;">7 Violet
+            </option><option value="8" style="color: #ffffff; background-color: gray;">8 Gray
+            </option><option value="9" style="color: #000000; background-color: #ffffff;">9 White
+            </option></select>
+</td>
+<td>
+<select style="color: rgb(255, 255, 255); background-color: black;" name="third_digit5" onchange="resistor_calculate_5()" id="three5">
+			<option value="0" style="color: #ffffff; background-color: black;">0 Black
+            </option><option value="1" style="color: #ffffff; background-color: #a52a2a;">1 Brown
+            </option><option value="2" style="color: #ffffff; background-color: red;">2 Red
+            </option><option value="3" selected="selected" style="color: #000000; background-color: orange;">3 Orange
+            </option><option value="4" style="color: #000000; background-color: yellow;">4 Yellow
+            </option><option value="5" style="color: #ffffff; background-color: green;">5 Green
+            </option><option value="6" style="color: #ffffff; background-color: blue;">6 Blue
+            </option><option value="7" style="color: #ffffff; background-color: #ee82ee;">7 Violet
+            </option><option value="8" style="color: #ffffff; background-color: gray;">8 Gray
+            </option><option value="9" style="color: #000000; background-color: #ffffff;">9 White
+            </option></select>
+</td>
+
+<td>
+<select style="color: rgb(255, 255, 255); background-color: rgb(165, 42, 42);" name="multiplier5" onchange="resistor_calculate_5()" id="four5">
+		<option value="1" style="color: #ffffff; background-color: black;">x1 Black
+            </option><option value="10" style="color: #ffffff; background-color: #a52a2a;">x10 Brown
+            </option><option value="100" selected="selected" style="color: #ffffff; background-color: red;">x100 Red
+            </option><option value="1000" style="color: #000000; background-color: orange;">x1000 Orange
+            </option><option value="10000" style="color: #000000; background-color: yellow;">x10000 Yellow
+            </option><option value="100000" style="color: #ffffff; background-color: green;">x100000 Green
+            </option><option value="1000000" style="color: #ffffff; background-color: blue;">x1000000 Blue
+            </option>
+            <option value="10000000" style="color: #ffffff; background-color: #ee82ee;">x10M Violet
+            </option>
+            <option value="100000000" style="color: #ffffff; background-color: gray;">x100M Gray
+            </option>
+            <option value="1000000000" style="color: #000000; background-color: white;">x1G White
+            </option>
+            <option value="0.1" style="color: #000000; background-color: #ffd700;">x0.1 Gold
+            </option><option value="0.01" style="color: #000000; background-color: silver;">x0.01 Silver
+            </option></select>
+</td>
+
+<td>
+<select style="color: #000000; background-color: #ffd700;" name="tolerance5" onchange="resistor_calculate_5()" id="five5">
+
+<option value="± 1%" style="color: #ffffff; background-color: #a52a2a;">± 1% Brown</option>
+<option value="± 2%" style="color: #ffffff; background-color: red;">± 2% Red</option>
+<option value="± 3%" style="color: #000000; background-color: orange;">± 3% Orange</option>
+<option value="± 4%" style="color: #000000; background-color: yellow;">± 4% Yellow</option>
+<option value="± 0.5%" style="color: #ffffff; background-color: green;">± 0.5% Green</option>
+<option value="± 0.25%" style="color: #ffffff; background-color: blue;">± 0.25% Blue</option>
+<option value="± 0.10%" style="color: #ffffff; background-color: #ee82ee;">± 0.10% Violet</option>
+<option value="± 0.05%" style="color: #ffffff; background-color: gray;">± 0.05% Gray</option>
+<option value="± 5%" selected="selected" style="color: #000000; background-color: #ffd700;">± 5% Gold</option>
+<option value="± 10%" style="color: #000000; background-color: silver;">± 10% Silver</option>
+
+</select>
+</td>
+</tr>
+
+<tr style="height:20px;"></tr>
+
+<tr>
+<td>
+<label><b>Resistance </b>:</label>
+</td>
+<td colspan="3">
+<input type="text" name="resistance5" value="10.3K Ohms">
+</td>
+
+</tr>
+
+<tr>
+<td>
+<label><b>Tolerance </b>:</label>
+</td>
+<td colspan="3">
+<input type="text" name="tolerance_html5" value="± 5%">
+</td>
+</tr>
+
+</tbody></table>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style=" background-image:url(resistor-symbol.png); background-repeat:no-repeat;display:inline-block; width:650px; margin-bottom: 30px;">
+
+<div id="first_div6" style="background-color:#a52a2a; width:20px;height: 117px; margin-left: 185px; display:inherit; margin-bottom:4px;"></div>
+<div id="second_div6" style="background-color:black; width:20px;height: 108px; margin-left: 35px; display:inherit;margin-bottom:9px;"></div>
+<div id="third_div6" style="background-color:orange; width:20px;height: 108px; margin-left: 20px;display:inherit;margin-bottom:9px;"></div>
+<div id="fourth_div6" style="background-color:red; width:20px;height: 108px; margin-left: 20px;display:inherit;margin-bottom:9px;"></div>
+<div id="fifth_div6" style="background-color:#ffd700; width:20px;height: 108px; margin-left: 35px;display:inherit;margin-bottom:9px;"></div>
+<div id="sixth_div6" style="background-color:#a52a2a; width:20px;height: 118px; margin-left: 35px;display:inherit;margin-bottom:4px;"></div>
+
+
+</div>
+<form name="resistor_color_code_6">
+<table>
+
+<tbody><tr>
+<td><b>First Digit</b></td><td><b>Second Digit</b></td><td><b>Third Digit</b></td><td><b>Multiplier</b></td><td><b>Tolerance</b></td><td><b>Temp. Coefficient</b></td>
+</tr>
+
+<tr>
+<td>
+<select style="color: #ffffff; background-color: #a52a2a;" name="first_digit6" id="one6" onchange="resistor_calculate_6()">
+		<option value="1" selected="selected" style="color: #ffffff; background-color: #a52a2a;">1 Brown
+            </option><option value="2" style="color: #ffffff; background-color: red;">2 Red
+            </option><option value="3" style="color: #000000; background-color: orange;">3 Orange
+            </option><option value="4" style="color: #000000; background-color: yellow;">4 Yellow
+            </option><option value="5" style="color: #ffffff; background-color: green;">5 Green
+            </option><option value="6" style="color: #ffffff; background-color: blue;">6 Blue
+            </option><option value="7" style="color: #ffffff; background-color: #ee82ee;">7 Violet
+            </option><option value="8" style="color: #ffffff; background-color: gray;">8 Gray
+            </option><option value="9" style="color: #000000; background-color: #ffffff;">9 White
+            </option></select>
+</td>
+<td>
+<select style="color: #ffffff; background-color: Black;" name="second_digit6" onchange="resistor_calculate_6()" id="two6">
+			<option value="0" selected="selected" style="color: #ffffff; background-color: black;">0 Black
+            </option><option value="1" style="color: #ffffff; background-color: #a52a2a;">1 Brown
+            </option><option value="2" style="color: #ffffff; background-color: red;">2 Red
+            </option><option value="3" style="color: #000000; background-color: orange;">3 Orange
+            </option><option value="4" style="color: #000000; background-color: yellow;">4 Yellow
+            </option><option value="5" style="color: #ffffff; background-color: green;">5 Green
+            </option><option value="6" style="color: #ffffff; background-color: blue;">6 Blue
+            </option><option value="7" style="color: #ffffff; background-color: #ee82ee;">7 Violet
+            </option><option value="8" style="color: #ffffff; background-color: gray;">8 Gray
+            </option><option value="9" style="color: #000000; background-color: #ffffff;">9 White
+            </option></select>
+</td>
+<td>
+<select style="color: #000000; background-color: orange;" name="third_digit6" onchange="resistor_calculate_6()" id="three6">
+			<option value="0" style="color: #ffffff; background-color: black;">0 Black
+            </option><option value="1" style="color: #ffffff; background-color: #a52a2a;">1 Brown
+            </option><option value="2" style="color: #ffffff; background-color: red;">2 Red
+            </option><option value="3" selected="selected" style="color: #000000; background-color: orange;">3 Orange
+            </option><option value="4" style="color: #000000; background-color: yellow;">4 Yellow
+            </option><option value="5" style="color: #ffffff; background-color: green;">5 Green
+            </option><option value="6" style="color: #ffffff; background-color: blue;">6 Blue
+            </option><option value="7" style="color: #ffffff; background-color: #ee82ee;">7 Violet
+            </option><option value="8" style="color: #ffffff; background-color: gray;">8 Gray
+            </option><option value="9" style="color: #000000; background-color: #ffffff;">9 White
+            </option></select>
+</td>
+
+<td>
+<select style="color: #ffffff; background-color: red;" name="multiplier6" onchange="resistor_calculate_6()" id="four6">
+		<option value="1" style="color: #ffffff; background-color: black;">x1 Black
+            </option><option value="10" style="color: #ffffff; background-color: #a52a2a;">x10 Brown
+            </option><option value="100" selected="selected" style="color: #ffffff; background-color: red;">x100 Red
+            </option><option value="1000" style="color: #000000; background-color: orange;">x1000 Orange
+            </option><option value="10000" style="color: #000000; background-color: yellow;">x10000 Yellow
+            </option><option value="100000" style="color: #ffffff; background-color: green;">x100000 Green
+            </option><option value="1000000" style="color: #ffffff; background-color: blue;">x1000000 Blue
+            </option>
+            <option value="10000000" style="color: #ffffff; background-color: #ee82ee;">x10M Violet
+            </option>
+            <option value="100000000" style="color: #ffffff; background-color: gray;">x100M Gray
+            </option>
+            <option value="1000000000" style="color: #000000; background-color: white;">x1G White
+            </option>
+            <option value="0.1" style="color: #000000; background-color: #ffd700;">x0.1 Gold
+            </option><option value="0.01" style="color: #000000; background-color: silver;">x0.01 Silver
+            </option></select>
+</td>
+
+<td>
+<select style="color: #000000; background-color: #ffd700;" name="tolerance6" onchange="resistor_calculate_6()" id="five6">
+
+<option value="± 1%" style="color: #ffffff; background-color: #a52a2a;">± 1% Brown</option>
+<option value="± 2%" style="color: #ffffff; background-color: red;">± 2% Red</option>
+<option value="± 3%" style="color: #000000; background-color: orange;">± 3% Orange</option>
+<option value="± 4%" style="color: #000000; background-color: yellow;">± 4% Yellow</option>
+<option value="± 0.5%" style="color: #ffffff; background-color: green;">± 0.5% Green</option>
+<option value="± 0.25%" style="color: #ffffff; background-color: blue;">± 0.25% Blue</option>
+<option value="± 0.10%" style="color: #ffffff; background-color: #ee82ee;">± 0.10% Violet</option>
+<option value="± 0.05%" style="color: #ffffff; background-color: gray;">± 0.05% Gray</option>
+<option value="± 5%" selected="selected" style="color: #000000; background-color: #ffd700;">± 5% Gold</option>
+<option value="± 10%" style="color: #000000; background-color: silver;">± 10% Silver</option>
+
+</select>
+</td>
+
+<td>
+<select style="color: #ffffff; background-color: #a52a2a;" name="tempco6" onchange="resistor_calculate_6()" id="six6">
+
+<option style="color: #ffffff; background-color: #a52a2a;" value="100" selected="">100 Brown</option>
+<option style="color: #ffffff; background-color: red;" value="50">50 Red</option>
+<option style="color: #000000; background-color: orange;" value="15">15 Orange</option>
+<option style="color: #000000; background-color: yellow;" value="25">25 Yellow</option>
+<option style="color: #ffffff; background-color: blue;" value="10">10 Blue</option>
+<option style="color: #ffffff; background-color: #ee82ee;" value="5">5 Violet</option>
+
+</select>
+</td>
+</tr>
+
+<tr style="height:20px;"></tr>
+
+<tr>
+<td>
+<label><b>Resistance </b>:</label>
+</td>
+<td colspan="3">
+<input type="text" name="resistance6" value="10.3K Ohms">
+</td>
+
+</tr>
+
+<tr>
+<td>
+<label><b>Tolerance </b>:</label>
+</td>
+<td colspan="3">
+<input type="text" name="tolerance_html6" value="± 5%">
+</td>
+</tr>
+
+<tr>
+<td>
+<label><b>Temp. Co. </b>:</label>
+</td>
+<td colspan="3">
+<input type="text" name="temp_html6" value="100 ppm/K">
+</td>
+</tr>
+
+</tbody></table>
+
+
+</form>
+
+
+
+
+
+  </BODY>
+</HTML>

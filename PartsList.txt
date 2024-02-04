@@ -1,0 +1,98 @@
+C1	100uf				Polarized
+C2	10uf				Polarized
+C3	20pf				Ceramic
+C4	20pf				Ceramic
+C5	.1uf				Ceramic
+J1	2 Pin Connector		2 Pin Connector
+J2	5 Pin Connector		5 Pin Connector
+J3	8 Pin Connector		8 Pin Connector
+U1	ATMEGA328P-U		ATMEGA328P-U
+U2	LM7805				Voltage Regulator
+X1	16Mhz				Oscillator
+
+
+B1	Car					Car
+B2	AVR					AVR
+F1	10A					10A Fuse
+F2	10A					10A Fuse
+F3	10A					10A Fuse
+L1	Light				3 Prong Light
+L2	Light				3 Prong Light
+L3	Light				3 Prong Light
+L4	Light				3 Prong Light
+R1	1k					1k
+RL1	Solid State Relay	MOSFET Relay
+RL2	Solid State Relay	MOSFET Relay
+RL3	Solid State Relay	MOSFET Relay
+SW1	Running Lamps		Running Lamps
+SW2	Low Beam			Low Beams
+SW3	High Beams			High Beams
+
+
+C1	100uf				Polarized
+C2	10uf				Polarized
+C3	20pf				Ceramic
+C4	20pf				Ceramic
+C5	.1uf				Ceramic
+D1	G					Green
+D2	R					Red
+J1	2 Pin Connector		2 Pin Connector
+J2	2 Pin Connector		2 Pin Connector
+J3	7 Pin Connector		7 Pin Connector
+R1	1k					1k
+R2	.3k					.3k
+R3	.3k					.3k
+RL1	Solid State Relay	MOSFET Relay
+U1	ATMEGA328P-U		ATMEGA328P-U
+U2	LM7805				Voltage Regulator
+X1	16Mhz				Oscillator
+
+
+C1	100uf				Polarized
+C2	10uf				Polarized
+C3	20pf				Ceramic
+C4	20pf				Ceramic
+C5	.1uf				Ceramic
+C6	.1uf				Ceramic
+D1	G					Green
+D2	R					Red
+J1	2 Pin Connector		2 Pin Connector
+J2	2 Pin Connector		2 Pin Connector
+J3	7 Pin Connector		7 Pin Connector
+R1	1k					1k
+R2	.3k					.3k
+R3	.3k					.3k
+RL1	Solid State Relay	MOSFET Relay
+U1	ATMEGA328P-U		ATMEGA328P-U
+U2	LM7805				Voltage Regulator
+X1	16Mhz				Oscillator
+
+
+C1	100uf				Polarized
+C2	10uf				Polarized
+C3	20pf				Ceramic
+C4	20pf				Ceramic
+C5	.1uf				Ceramic
+J1	2 Pin Connector		2 Pin Connector
+J2	7 Pin Connector		7 Pin Connector
+J4	2 Pin Connector		2 Pin Connector
+R1	1k					1k
+R2	500k				500k
+R3	500k				500k
+R4	500k				500k
+R5	500k				500k
+R6	500k				500k
+R7	500k				500k
+U1	ATMEGA328P-U		ATMEGA328P-U
+U2	LM7805				Voltage Regulator
+U3	MOSFET Relay		PVG612APBF
+U4	MOSFET Relay		PVG612APBF
+U5	MOSFET Relay		PVG612APBF
+U6	MOSFET Relay		PVG612APBF
+U7	MOSFET Relay		PVG612APBF
+U8	MOSFET Relay		PVG612APBF
+X1	16Mhz				Oscillator
+
+
+J1	2x3 Connector		2x3 Connector
+U1	ATMEGA328P-U		ATMEGA328P-U

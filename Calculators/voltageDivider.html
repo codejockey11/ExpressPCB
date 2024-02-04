@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<HTML>
+  <HEAD>
+    <meta HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=utf-8"/>
+
+<style>
+input[type='text']
+{
+	font-family:Verdana;
+	font-size:12px;
+	border:1px solid rgb(211, 211, 211);
+	border-radius:3px;
+}
+button
+{
+	font-family:Verdana;
+	font-size:12px;
+	text-align:center;
+	min-width:60px;
+	border-radius:3px;
+	border:1px solid rgb(211, 211, 211);
+}
+button:hover
+{
+	color:rgb(11, 83, 148);
+	border-radius:3px;
+	box-shadow:0px 0px 3px rgb(11, 83, 148);
+	border:1px solid rgb(11, 83, 148);
+}
+td
+{
+	font-family:Verdana;
+	font-size:12px;
+	font-weight:normal;
+}
+</style>
+
+<script>
+function GetSelectedItem(el)
+{
+	if (!el)
+	{
+		return null;
+	}
+
+    return el.options[el.selectedIndex].value;
+
+}
+
+function calc(i)
+{
+	var volts = parseFloat(document.getElementById("iVoltage").value);
+	
+	var ohms1 = parseFloat(document.getElementById("iResistance1").value);
+	var ohms2 = parseFloat(document.getElementById("iResistance2").value);
+	
+	var voltsout = parseFloat(document.getElementById("iVoltageOut").value);
+	
+	if (isNaN(volts))
+	{
+		volts = voltsout * (ohms1 + ohms2) / ohms2;
+	}
+	else if (isNaN(ohms1))
+	{
+		ohms1 = volts * ohms2 / voltsout - ohms2;
+	}
+	else if (isNaN(ohms2))
+	{
+		ohms2 = voltsout * ohms1 / (volts - voltsout);
+	}
+	else if (isNaN(voltsout))
+	{
+		voltsout = volts * ohms2 / (ohms1 + ohms2);
+	}
+	
+	document.getElementById("iVoltage").value = parseFloat(volts, 3);
+
+	document.getElementById("iResistance1").value = parseFloat(ohms1, 3);
+	document.getElementById("iResistance2").value = parseFloat(ohms2, 3);
+	
+	document.getElementById("iVoltageOut").value = parseFloat(voltsout, 3);
+}
+</script>
+
+  </HEAD>
+  <BODY>
+    <TITLE>Voltage Divider Calculator</TITLE>
+	
+	<a href="resistorCalculator.html">Resistor Calculator</a>
+
+<form method="POST">
+
+<table>
+
+<tr>
+<td colspan="3"><center>Enter three Values</center></td>
+</tr>
+
+<tr>
+<td>Voltage Source (V<sub>S</sub>)</td>
+<td><input type="text" id="iVoltage"></td>
+</tr>
+
+<tr>
+<td>Resistance 1 (R<sub>1</sub>)</td>
+<td><input type="text" id="iResistance1"></td>
+<td>
+</td>
+</tr>
+
+<tr>
+<td>Resistance 2 (R<sub>2</sub>)</td>
+<td><input type="text" id="iResistance2"></td>
+</tr>
+
+<tr>
+<td>Output Voltage (V<sub>OUT</sub>)</td>
+<td><input type="text" id="iVoltageOut"></td>
+</tr>
+
+<tr>
+<td colspan="2"><center><button type="BUTTON" id="btnCalc" onclick="calc()">Calculate</button></center></td>
+</tr>
+
+</table>
+
+</form>
+
+
+</body>
+</html>
